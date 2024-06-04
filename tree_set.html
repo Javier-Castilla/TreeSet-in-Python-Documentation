@@ -7,7 +7,6 @@
   <title>tree_set module &mdash; TreeSet in Python 1.0.0 documentation</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
       <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
-      <link rel="stylesheet" type="text/css" href="_static/custom.css" />
 
   
   <!--[if lt IE 9]>
@@ -122,23 +121,17 @@ If needed to use a self-balancing tree with more operations, it is
 recommended to use the <a class="reference internal" href="#tree_set.TreeSet" title="tree_set.TreeSet"><code class="xref py py-class docutils literal notranslate"><span class="pre">TreeSet</span></code></a> class.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="tree_set.RedBlackTree.add">
-<span class="sig-name descname"><span class="pre">add</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#tree_set.RedBlackTree.add" title="Link to this definition"></a></dt>
-<dd><p>Wrapper function used to validate if the given value is None or not.</p>
+<span class="sig-name descname"><span class="pre">add</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Any</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#tree_set.RedBlackTree.add" title="Link to this definition"></a></dt>
+<dd><p>Inserts a new value into the RedBlackTree.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>self</strong> (<a class="reference internal" href="#tree_set.TreeSet" title="tree_set.TreeSet"><em>TreeSet</em></a>) – the instance of the current TreeSet</p></li>
-<li><p><strong>value</strong> (<em>E</em>) – value to validate</p></li>
-</ul>
+<dd class="field-odd"><p><strong>value</strong> (<em>Any</em>) – the value to insert</p>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>the given function return statement</p>
+<dd class="field-even"><p>False if the value already exists in the tree, True otherwise</p>
 </dd>
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p>Any</p>
-</dd>
-<dt class="field-even">Raises<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference internal" href="tree_set_exceptions.html#tree_set_exceptions.NullPointerException" title="tree_set_exceptions.NullPointerException"><strong>NullPointerException</strong></a> – if the item is None</p>
+<dd class="field-odd"><p>bool</p>
 </dd>
 </dl>
 </dd></dl>
@@ -179,23 +172,17 @@ recommended to use the <a class="reference internal" href="#tree_set.TreeSet" ti
 
 <dl class="py method">
 <dt class="sig sig-object py" id="tree_set.RedBlackTree.remove">
-<span class="sig-name descname"><span class="pre">remove</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#tree_set.RedBlackTree.remove" title="Link to this definition"></a></dt>
-<dd><p>Wrapper function used to validate if the given value is None or not.</p>
+<span class="sig-name descname"><span class="pre">remove</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#tree_set.RedBlackTree.remove" title="Link to this definition"></a></dt>
+<dd><p>Deletes a value from the RedBlackTree.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>self</strong> (<a class="reference internal" href="#tree_set.TreeSet" title="tree_set.TreeSet"><em>TreeSet</em></a>) – the instance of the current TreeSet</p></li>
-<li><p><strong>value</strong> (<em>E</em>) – value to validate</p></li>
-</ul>
+<dd class="field-odd"><p><strong>value</strong> (<em>Any</em>) – the value to delete</p>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>the given function return statement</p>
+<dd class="field-even"><p>False if the value does not exist in the tree, True otherwise</p>
 </dd>
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p>Any</p>
-</dd>
-<dt class="field-even">Raises<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference internal" href="tree_set_exceptions.html#tree_set_exceptions.NullPointerException" title="tree_set_exceptions.NullPointerException"><strong>NullPointerException</strong></a> – if the item is None</p>
+<dd class="field-odd"><p>bool</p>
 </dd>
 </dl>
 </dd></dl>
@@ -254,23 +241,28 @@ instance type</p></li>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="tree_set.TreeSet.ceiling">
-<span class="sig-name descname"><span class="pre">ceiling</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#tree_set.TreeSet.ceiling" title="Link to this definition"></a></dt>
-<dd><p>Wrapper function used to validate if the given value is None or not.</p>
+<span class="sig-name descname"><span class="pre">ceiling</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">E</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">E</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></span><a class="headerlink" href="#tree_set.TreeSet.ceiling" title="Link to this definition"></a></dt>
+<dd><p>Returns the least element in this set greater than
+or equal to the given element, or null if there is no
+such element.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>self</strong> (<a class="reference internal" href="#tree_set.TreeSet" title="tree_set.TreeSet"><em>TreeSet</em></a>) – the instance of the current TreeSet</p></li>
-<li><p><strong>value</strong> (<em>E</em>) – value to validate</p></li>
-</ul>
+<dd class="field-odd"><p><strong>value</strong> (<em>E</em>) – value to compare</p>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>the given function return statement</p>
+<dd class="field-even"><p>the least element in this set greater than or equal
+to the given element. If it was not found, None will be returned</p>
 </dd>
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p>Any</p>
+<dd class="field-odd"><p><a class="reference internal" href="#tree_set.TreeSet" title="tree_set.TreeSet">TreeSet</a></p>
 </dd>
 <dt class="field-even">Raises<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference internal" href="tree_set_exceptions.html#tree_set_exceptions.NullPointerException" title="tree_set_exceptions.NullPointerException"><strong>NullPointerException</strong></a> – if the item is None</p>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>TypeError</strong> – if the given values does not match the
+instance type</p></li>
+<li><p><a class="reference internal" href="tree_set_exceptions.html#tree_set_exceptions.NullPointerException" title="tree_set_exceptions.NullPointerException"><strong>NullPointerException</strong></a> – if the given value is None</p></li>
+<li><p><a class="reference internal" href="tree_set_exceptions.html#tree_set_exceptions.ClassCastException" title="tree_set_exceptions.ClassCastException"><strong>ClassCastException</strong></a> – if the given value is not comparable</p></li>
+</ul>
 </dd>
 </dl>
 </dd></dl>
@@ -350,46 +342,56 @@ elements.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="tree_set.TreeSet.floor">
-<span class="sig-name descname"><span class="pre">floor</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#tree_set.TreeSet.floor" title="Link to this definition"></a></dt>
-<dd><p>Wrapper function used to validate if the given value is None or not.</p>
+<span class="sig-name descname"><span class="pre">floor</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">E</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">E</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></span><a class="headerlink" href="#tree_set.TreeSet.floor" title="Link to this definition"></a></dt>
+<dd><p>Returns the greatest element in this set less than or
+equal to the given element, or null if there is no such
+element.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>self</strong> (<a class="reference internal" href="#tree_set.TreeSet" title="tree_set.TreeSet"><em>TreeSet</em></a>) – the instance of the current TreeSet</p></li>
-<li><p><strong>value</strong> (<em>E</em>) – value to validate</p></li>
-</ul>
+<dd class="field-odd"><p><strong>value</strong> (<em>E</em>) – value to compare</p>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>the given function return statement</p>
+<dd class="field-even"><p>the greatest element in this set less than or</p>
 </dd>
-<dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p>Any</p>
-</dd>
-<dt class="field-even">Raises<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference internal" href="tree_set_exceptions.html#tree_set_exceptions.NullPointerException" title="tree_set_exceptions.NullPointerException"><strong>NullPointerException</strong></a> – if the item is None</p>
+</dl>
+<p>equal to the given element
+:rtype: TreeSet
+:raises TypeError: if the given values does not match the</p>
+<blockquote>
+<div><p>instance type</p>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><a class="reference internal" href="tree_set_exceptions.html#tree_set_exceptions.NullPointerException" title="tree_set_exceptions.NullPointerException"><strong>NullPointerException</strong></a> – if the given value is None</p></li>
+<li><p><a class="reference internal" href="tree_set_exceptions.html#tree_set_exceptions.ClassCastException" title="tree_set_exceptions.ClassCastException"><strong>ClassCastException</strong></a> – if the given value is not comparable</p></li>
+</ul>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="tree_set.TreeSet.higher">
-<span class="sig-name descname"><span class="pre">higher</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#tree_set.TreeSet.higher" title="Link to this definition"></a></dt>
-<dd><p>Wrapper function used to validate if the given value is None or not.</p>
+<span class="sig-name descname"><span class="pre">higher</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">E</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">E</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></span><a class="headerlink" href="#tree_set.TreeSet.higher" title="Link to this definition"></a></dt>
+<dd><p>Returns the next higher value in the tree compared to the given
+value.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>self</strong> (<a class="reference internal" href="#tree_set.TreeSet" title="tree_set.TreeSet"><em>TreeSet</em></a>) – the instance of the current TreeSet</p></li>
-<li><p><strong>value</strong> (<em>E</em>) – value to validate</p></li>
-</ul>
+<dd class="field-odd"><p><strong>value</strong> – value to compare</p>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>the given function return statement</p>
+<dd class="field-even"><p>the next higher value in the tree compared to the given value</p>
 </dd>
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p>Any</p>
+<dd class="field-odd"><p>Union[E, None]</p>
 </dd>
 <dt class="field-even">Raises<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference internal" href="tree_set_exceptions.html#tree_set_exceptions.NullPointerException" title="tree_set_exceptions.NullPointerException"><strong>NullPointerException</strong></a> – if the item is None</p>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>TypeError</strong> – if the given values does not match the
+instance type</p></li>
+<li><p><a class="reference internal" href="tree_set_exceptions.html#tree_set_exceptions.NullPointerException" title="tree_set_exceptions.NullPointerException"><strong>NullPointerException</strong></a> – if the given value is None</p></li>
+<li><p><a class="reference internal" href="tree_set_exceptions.html#tree_set_exceptions.ClassCastException" title="tree_set_exceptions.ClassCastException"><strong>ClassCastException</strong></a> – if the given value is not comparable</p></li>
+</ul>
 </dd>
 </dl>
 </dd></dl>
@@ -428,23 +430,27 @@ instance.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="tree_set.TreeSet.lower">
-<span class="sig-name descname"><span class="pre">lower</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#tree_set.TreeSet.lower" title="Link to this definition"></a></dt>
-<dd><p>Wrapper function used to validate if the given value is None or not.</p>
+<span class="sig-name descname"><span class="pre">lower</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">E</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">E</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></span><a class="headerlink" href="#tree_set.TreeSet.lower" title="Link to this definition"></a></dt>
+<dd><p>Returns the contiguous lower element of the given value from the
+TreeSet.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>self</strong> (<a class="reference internal" href="#tree_set.TreeSet" title="tree_set.TreeSet"><em>TreeSet</em></a>) – the instance of the current TreeSet</p></li>
-<li><p><strong>value</strong> (<em>E</em>) – value to validate</p></li>
-</ul>
+<dd class="field-odd"><p><strong>value</strong> (<em>E</em>) – value to compare</p>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>the given function return statement</p>
+<dd class="field-even"><p>the greatest element lower than the given value. If it was not
+found, None will be returned.</p>
 </dd>
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p>Any</p>
+<dd class="field-odd"><p>Union[E, None]</p>
 </dd>
 <dt class="field-even">Raises<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference internal" href="tree_set_exceptions.html#tree_set_exceptions.NullPointerException" title="tree_set_exceptions.NullPointerException"><strong>NullPointerException</strong></a> – if the item is None</p>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>TypeError</strong> – if the given values does not match the
+instance type</p></li>
+<li><p><a class="reference internal" href="tree_set_exceptions.html#tree_set_exceptions.NullPointerException" title="tree_set_exceptions.NullPointerException"><strong>NullPointerException</strong></a> – if the given value is None</p></li>
+<li><p><a class="reference internal" href="tree_set_exceptions.html#tree_set_exceptions.ClassCastException" title="tree_set_exceptions.ClassCastException"><strong>ClassCastException</strong></a> – if the given value is not comparable</p></li>
+</ul>
 </dd>
 </dl>
 </dd></dl>
